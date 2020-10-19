@@ -39,15 +39,27 @@ Then Deploy in Netlify
 Setup database on Airtable
 Create React App
     npx create-react-app .
-Install
-    $ npm i airtable styled-components
 ```
 
 ```
 Config Airtable
+
+go to airtable.com/api to get your apiKey and base name
+create .env file
+add the .env file to .gitignore
+
+Install
+    $ npm i airtable styled-components
+
+App.js
+
+
+
+
+
+
+
 App.js
 import Airtable from 'airtable'
 const base = new Airtable({apiKey:"keyE5HXx3pdspfEF6"}).base('appxK2lvS7XfyAeXw')
-
-go to airtable.com/api to get your apiKey and base name
 ```
