@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from "react";
-const Airtable = require('airtable');
+import Airtable from 'airtable';
+import Goal from "./components/Goal";
+import styled from 'styled-components'
+import {GlobalStyle} from "./styles/Global.style"
 
 const base = new Airtable({apiKey:'keyE5HXx3pdspfEF6'}).base('appxK2lvS7XfyAeXw')
+
+const StyledH1 = styled.h1`
+  text-align:center;
+  font-size: 4rem;
+  margin: 1rem 0;
+
+`
 
 function App() {
   const [goals,setGoals] = useState([])
@@ -11,6 +21,7 @@ function App() {
     base("goals")
     .select({view:"Grid view"})
     .eachPage((records,fetchNextPage)=>{
+      console.log(records);
       setGoals(records)
       fetchNextPage();
     })
@@ -24,9 +35,17 @@ function App() {
 
 
   return (
-    <div className="App">
-    <h1>Basha</h1>
-    </div>
+    <>
+    <GlobalStyle />
+    <StyledH1>My Goals</StyledH1>
+    {goals.map(goal=>(
+      <Goal
+        key={goal.id}
+        goal={goal}
+        updates={updates.filter(update=> update.fields.goalid[0] === goal.id)}
+      />
+    ))}
+    </>
   );
 
   }
