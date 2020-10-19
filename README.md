@@ -12,7 +12,6 @@ Git Clone : https://github.com/codeSTACKr/goal-manager-react.git
   - https://50reactprojects.com/
 
 ```
-{
 ⏳ Time Stamps ⏳
 00:00 Intro
 00:26 embold.io Overview
@@ -22,7 +21,6 @@ Git Clone : https://github.com/codeSTACKr/goal-manager-react.git
 17:56 styled-components
 31:37 Publish to GitHub
 32:34 embold.io Project Set-Up & Walkthrough
-}
 ```
 
 ```
@@ -37,6 +35,19 @@ Display our goals in our React project
 Then Deploy in Netlify
 ```
 
-- Setup database on Airtable
-- Create React App
-  - npx create-react-app .
+```
+Setup database on Airtable
+Create React App
+    npx create-react-app .
+Install
+    $ npm i airtable styled-components
+```
+
+```
+Config Airtable
+App.js
+import Airtable from 'airtable'
+const base = new Airtable({apiKey:"keyE5HXx3pdspfEF6"}).base('appxK2lvS7XfyAeXw')
+
+go to airtable.com/api to get your apiKey and base name
+```
