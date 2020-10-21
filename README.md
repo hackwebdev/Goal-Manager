@@ -2,14 +2,17 @@
 
 Goal manager using React, Airtable and Styled Components
 
+```
 Youtube Link : https://www.youtube.com/watch?v=FEoEvSmtmPQ&t=331s
 Youtube Channel : codeSTACKr
 Github Project Repo Link : https://github.com/codeSTACKr/goal-manager-react
 Git Clone : https://github.com/codeSTACKr/goal-manager-react.git
+```
 
-- Other Resource:
-  - 50 Projects from @Colby Fayock
-  - https://50reactprojects.com/
+Other Resource:
+
+- 50 Projects from @Colby Fayock
+- https://50reactprojects.com/
 
 ```
 ⏳ Time Stamps ⏳
@@ -62,4 +65,8 @@ App.js
 App.js
 import Airtable from 'airtable'
 const base = new Airtable({apiKey:"keyE5HXx3pdspfEF6"}).base('appxK2lvS7XfyAeXw')
+```
+
+```
+
 ```
